@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="assets/css/index.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="assets/css/article-container.css">
+    <title>Coderio</title>
+</head>
+
+<body onload="initialize()">
+    <div id="cover-website" style='display:none'></div>
+    <div id="loader">
+            <svg  class="Loader-logo" width="395" height="79" viewBox="0 0 395 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <mask id="path-1-outside-1" maskUnits="userSpaceOnUse" x="0.578125" y="0.8125" width="395" height="79" fill="black">
+                <rect fill="white" x="0.578125" y="0.8125" width="395" height="79"/>
+                <path d="M57.125 52.3438C56.2812 59.5625 53.6094 65.1406 49.1094 69.0781C44.6406 72.9844 38.6875 74.9375 31.25 74.9375C23.1875 74.9375 16.7188 72.0469 11.8438 66.2656C7 60.4844 4.57812 52.75 4.57812 43.0625V36.5C4.57812 30.1562 5.70312 24.5781 7.95312 19.7656C10.2344 14.9531 13.4531 11.2656 17.6094 8.70312C21.7656 6.10938 26.5781 4.8125 32.0469 4.8125C39.2969 4.8125 45.1094 6.84375 49.4844 10.9062C53.8594 14.9375 56.4062 20.5312 57.125 27.6875H48.0781C47.2969 22.25 45.5938 18.3125 42.9688 15.875C40.375 13.4375 36.7344 12.2188 32.0469 12.2188C26.2969 12.2188 21.7812 14.3438 18.5 18.5938C15.25 22.8438 13.625 28.8906 13.625 36.7344V43.3438C13.625 50.75 15.1719 56.6406 18.2656 61.0156C21.3594 65.3906 25.6875 67.5781 31.25 67.5781C36.25 67.5781 40.0781 66.4531 42.7344 64.2031C45.4219 61.9219 47.2031 57.9688 48.0781 52.3438H57.125Z"/>
+                <path d="M121.953 42.0781C121.953 48.7656 120.828 54.6094 118.578 59.6094C116.328 64.5781 113.141 68.375 109.016 71C104.891 73.625 100.078 74.9375 94.5781 74.9375C89.2031 74.9375 84.4375 73.625 80.2812 71C76.125 68.3438 72.8906 64.5781 70.5781 59.7031C68.2969 54.7969 67.125 49.125 67.0625 42.6875V37.7656C67.0625 31.2031 68.2031 25.4062 70.4844 20.375C72.7656 15.3438 75.9844 11.5 80.1406 8.84375C84.3281 6.15625 89.1094 4.8125 94.4844 4.8125C99.9531 4.8125 104.766 6.14062 108.922 8.79688C113.109 11.4219 116.328 15.25 118.578 20.2812C120.828 25.2812 121.953 31.1094 121.953 37.7656V42.0781ZM113 37.6719C113 29.5781 111.375 23.375 108.125 19.0625C104.875 14.7188 100.328 12.5469 94.4844 12.5469C88.7969 12.5469 84.3125 14.7188 81.0312 19.0625C77.7812 23.375 76.1094 29.375 76.0156 37.0625V42.0781C76.0156 49.9219 77.6562 56.0938 80.9375 60.5938C84.25 65.0625 88.7969 67.2969 94.5781 67.2969C100.391 67.2969 104.891 65.1875 108.078 60.9688C111.266 56.7188 112.906 50.6406 113 42.7344V37.6719Z"/>
+                <path d="M135.453 74V5.75H154.719C160.656 5.75 165.906 7.0625 170.469 9.6875C175.031 12.3125 178.547 16.0469 181.016 20.8906C183.516 25.7344 184.781 31.2969 184.812 37.5781V41.9375C184.812 48.375 183.562 54.0156 181.062 58.8594C178.594 63.7031 175.047 67.4219 170.422 70.0156C165.828 72.6094 160.469 73.9375 154.344 74H135.453ZM144.453 13.1562V66.6406H153.922C160.859 66.6406 166.25 64.4844 170.094 60.1719C173.969 55.8594 175.906 49.7188 175.906 41.75V37.7656C175.906 30.0156 174.078 24 170.422 19.7188C166.797 15.4062 161.641 13.2188 154.953 13.1562H144.453Z"/>
+                <path d="M237.031 42.4531H207.453V66.6406H241.812V74H198.453V5.75H241.344V13.1562H207.453V35.0938H237.031V42.4531Z"/>
+                <path d="M278.047 46.3906H262.016V74H252.969V5.75H275.562C283.25 5.75 289.156 7.5 293.281 11C297.438 14.5 299.516 19.5938 299.516 26.2812C299.516 30.5312 298.359 34.2344 296.047 37.3906C293.766 40.5469 290.578 42.9062 286.484 44.4688L302.516 73.4375V74H292.859L278.047 46.3906ZM262.016 39.0312H275.844C280.312 39.0312 283.859 37.875 286.484 35.5625C289.141 33.25 290.469 30.1562 290.469 26.2812C290.469 22.0625 289.203 18.8281 286.672 16.5781C284.172 14.3281 280.547 13.1875 275.797 13.1562H262.016V39.0312Z"/>
+                <path d="M321.828 74H312.828V5.75H321.828V74Z"/>
+                <path d="M390.828 42.0781C390.828 48.7656 389.703 54.6094 387.453 59.6094C385.203 64.5781 382.016 68.375 377.891 71C373.766 73.625 368.953 74.9375 363.453 74.9375C358.078 74.9375 353.312 73.625 349.156 71C345 68.3438 341.766 64.5781 339.453 59.7031C337.172 54.7969 336 49.125 335.938 42.6875V37.7656C335.938 31.2031 337.078 25.4062 339.359 20.375C341.641 15.3438 344.859 11.5 349.016 8.84375C353.203 6.15625 357.984 4.8125 363.359 4.8125C368.828 4.8125 373.641 6.14062 377.797 8.79688C381.984 11.4219 385.203 15.25 387.453 20.2812C389.703 25.2812 390.828 31.1094 390.828 37.7656V42.0781ZM381.875 37.6719C381.875 29.5781 380.25 23.375 377 19.0625C373.75 14.7188 369.203 12.5469 363.359 12.5469C357.672 12.5469 353.188 14.7188 349.906 19.0625C346.656 23.375 344.984 29.375 344.891 37.0625V42.0781C344.891 49.9219 346.531 56.0938 349.812 60.5938C353.125 65.0625 357.672 67.2969 363.453 67.2969C369.266 67.2969 373.766 65.1875 376.953 60.9688C380.141 56.7188 381.781 50.6406 381.875 42.7344V37.6719Z"/>
+                </mask>
+                <path d="M57.125 52.3438C56.2812 59.5625 53.6094 65.1406 49.1094 69.0781C44.6406 72.9844 38.6875 74.9375 31.25 74.9375C23.1875 74.9375 16.7188 72.0469 11.8438 66.2656C7 60.4844 4.57812 52.75 4.57812 43.0625V36.5C4.57812 30.1562 5.70312 24.5781 7.95312 19.7656C10.2344 14.9531 13.4531 11.2656 17.6094 8.70312C21.7656 6.10938 26.5781 4.8125 32.0469 4.8125C39.2969 4.8125 45.1094 6.84375 49.4844 10.9062C53.8594 14.9375 56.4062 20.5312 57.125 27.6875H48.0781C47.2969 22.25 45.5938 18.3125 42.9688 15.875C40.375 13.4375 36.7344 12.2188 32.0469 12.2188C26.2969 12.2188 21.7812 14.3438 18.5 18.5938C15.25 22.8438 13.625 28.8906 13.625 36.7344V43.3438C13.625 50.75 15.1719 56.6406 18.2656 61.0156C21.3594 65.3906 25.6875 67.5781 31.25 67.5781C36.25 67.5781 40.0781 66.4531 42.7344 64.2031C45.4219 61.9219 47.2031 57.9688 48.0781 52.3438H57.125Z" stroke="white" stroke-width="8" mask="url(#path-1-outside-1)"/>
+                <path d="M121.953 42.0781C121.953 48.7656 120.828 54.6094 118.578 59.6094C116.328 64.5781 113.141 68.375 109.016 71C104.891 73.625 100.078 74.9375 94.5781 74.9375C89.2031 74.9375 84.4375 73.625 80.2812 71C76.125 68.3438 72.8906 64.5781 70.5781 59.7031C68.2969 54.7969 67.125 49.125 67.0625 42.6875V37.7656C67.0625 31.2031 68.2031 25.4062 70.4844 20.375C72.7656 15.3438 75.9844 11.5 80.1406 8.84375C84.3281 6.15625 89.1094 4.8125 94.4844 4.8125C99.9531 4.8125 104.766 6.14062 108.922 8.79688C113.109 11.4219 116.328 15.25 118.578 20.2812C120.828 25.2812 121.953 31.1094 121.953 37.7656V42.0781ZM113 37.6719C113 29.5781 111.375 23.375 108.125 19.0625C104.875 14.7188 100.328 12.5469 94.4844 12.5469C88.7969 12.5469 84.3125 14.7188 81.0312 19.0625C77.7812 23.375 76.1094 29.375 76.0156 37.0625V42.0781C76.0156 49.9219 77.6562 56.0938 80.9375 60.5938C84.25 65.0625 88.7969 67.2969 94.5781 67.2969C100.391 67.2969 104.891 65.1875 108.078 60.9688C111.266 56.7188 112.906 50.6406 113 42.7344V37.6719Z" stroke="white" stroke-width="8" mask="url(#path-1-outside-1)"/>
+                <path d="M135.453 74V5.75H154.719C160.656 5.75 165.906 7.0625 170.469 9.6875C175.031 12.3125 178.547 16.0469 181.016 20.8906C183.516 25.7344 184.781 31.2969 184.812 37.5781V41.9375C184.812 48.375 183.562 54.0156 181.062 58.8594C178.594 63.7031 175.047 67.4219 170.422 70.0156C165.828 72.6094 160.469 73.9375 154.344 74H135.453ZM144.453 13.1562V66.6406H153.922C160.859 66.6406 166.25 64.4844 170.094 60.1719C173.969 55.8594 175.906 49.7188 175.906 41.75V37.7656C175.906 30.0156 174.078 24 170.422 19.7188C166.797 15.4062 161.641 13.2188 154.953 13.1562H144.453Z" stroke="white" stroke-width="8" mask="url(#path-1-outside-1)"/>
+                <path d="M237.031 42.4531H207.453V66.6406H241.812V74H198.453V5.75H241.344V13.1562H207.453V35.0938H237.031V42.4531Z" stroke="white" stroke-width="8" mask="url(#path-1-outside-1)"/>
+                <path d="M278.047 46.3906H262.016V74H252.969V5.75H275.562C283.25 5.75 289.156 7.5 293.281 11C297.438 14.5 299.516 19.5938 299.516 26.2812C299.516 30.5312 298.359 34.2344 296.047 37.3906C293.766 40.5469 290.578 42.9062 286.484 44.4688L302.516 73.4375V74H292.859L278.047 46.3906ZM262.016 39.0312H275.844C280.312 39.0312 283.859 37.875 286.484 35.5625C289.141 33.25 290.469 30.1562 290.469 26.2812C290.469 22.0625 289.203 18.8281 286.672 16.5781C284.172 14.3281 280.547 13.1875 275.797 13.1562H262.016V39.0312Z" stroke="white" stroke-width="8" mask="url(#path-1-outside-1)"/>
+                <path d="M321.828 74H312.828V5.75H321.828V74Z" stroke="white" stroke-width="8" mask="url(#path-1-outside-1)"/>
+                <path d="M390.828 42.0781C390.828 48.7656 389.703 54.6094 387.453 59.6094C385.203 64.5781 382.016 68.375 377.891 71C373.766 73.625 368.953 74.9375 363.453 74.9375C358.078 74.9375 353.312 73.625 349.156 71C345 68.3438 341.766 64.5781 339.453 59.7031C337.172 54.7969 336 49.125 335.938 42.6875V37.7656C335.938 31.2031 337.078 25.4062 339.359 20.375C341.641 15.3438 344.859 11.5 349.016 8.84375C353.203 6.15625 357.984 4.8125 363.359 4.8125C368.828 4.8125 373.641 6.14062 377.797 8.79688C381.984 11.4219 385.203 15.25 387.453 20.2812C389.703 25.2812 390.828 31.1094 390.828 37.7656V42.0781ZM381.875 37.6719C381.875 29.5781 380.25 23.375 377 19.0625C373.75 14.7188 369.203 12.5469 363.359 12.5469C357.672 12.5469 353.188 14.7188 349.906 19.0625C346.656 23.375 344.984 29.375 344.891 37.0625V42.0781C344.891 49.9219 346.531 56.0938 349.812 60.5938C353.125 65.0625 357.672 67.2969 363.453 67.2969C369.266 67.2969 373.766 65.1875 376.953 60.9688C380.141 56.7188 381.781 50.6406 381.875 42.7344V37.6719Z" stroke="white" stroke-width="8" mask="url(#path-1-outside-1)"/>
+            </svg>
+                    
+                    
+                
+                
+        <br>            
+        <img src="./assets/icon/Loader.svg" alt='loader'/></div>
+    <div class='welcome'>
+        <div class="profile-icon" ><span></span></div>
+        <div id="profile-form" class="profile-form hidden">
+            <div class="close-button" style="position: absolute;right:0;top:0;width:30px;height:30px;background-image:url('./assets/icon/Cancel.png');background-size: cover;background-position: center;cursor: pointer;" ></div>
+                <form action="">
+                    <label for="username"><b>Username/E-mail</b></label>
+                    <input type="text" name="username" placeholder="username or email" required><br>
+                    <label for="password"><b>Password</b></label>
+                    <input type="password" name="password" placeholder="" required><br><br>
+                    <button type="submit" >Login</button>
+                  </form>
+        </div>
+        <nav>
+            <div class='Ham-icon' onclick="onHamClick()"><div class='bar1'></div><div class='bar2'></div><div class='bar3'></div></div>
+            <div id="navLogo"></div>
+            <div class="search-bar">
+                <input type="text" name="sb"  class="search-bar-field"><div class='search-button'><span></span></div><br>
+            </div>
+            <img id="search-icon" src="assets/icon/search.png" alt='search'/>
+                <ul class='links'>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Coding News</a></li>
+                    <li><a href="#">Big Events</a></li>
+                    <li><a href="#">Tutorials</a></li>
+                    <li><a href="#">Forum</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+        </nav>
+
+        <div class="front-screen">
+            <div class="sm-icons">
+                <div class='icon facebook'><a></a></div>
+                <div class='icon twitter'><a></a></div>
+                <div class='icon instagram'><a></a></div>
+                <div class='icon gmail'><a></a></div>
+            </div>
+        </div>
+    </div>
+    <div class="image-slide">
+        <ul>
+        </ul>
+    </div>
+    <main>
+        <div class='content'>
+<!-- ------------------------------------THE CONTENT OF THE PAGE--------------------------------- -->
+            <div class="side-content">
+                <ul>
+                    <div style="width:90%;margin:auto;height:3px;background-color:white"></div>
+                    <li><a>Most Popular</a></li>
+                    <li><a>Newest</a></li>
+                    <li><a>Useful links</a></li>
+                    <li><a>Best tutorials</a></li>
+                    <li><a>Top Members</a></li>
+                </ul>
+            </div>
+            <div class="middle-content">
+                <div class="article-container">
+                    <div><img src="./assets/data/articles/article-001/front.jpg" alt=""/></div>
+                    <h2>Web Design Tips & Tricks</h2>
+                    <p>if you feel like you nailed the basics yet your websites still dont feel really professional then you might want to...</p>
+                    <h5>By <span style="color:blue;">Author</span></h5>
+                </div>
+                <div class="article-container">
+                    <div><img src="./assets/data/articles/article-002/front.jpg" alt=""/></div>
+                    <h2>Python the best choice ?</h2>
+                    <p>there are all sorts of programming languages out there and internet articles really dont help that much since they all have conflicting thoughts...</p>
+                    <h5>By <span style="color:blue;">Author</span></h5>
+                </div>
+                <div class="article-container">
+                    <div><img src="./assets/data/articles/article-003/front.jpg" alt=""/></div>
+                    <h2>The Art of Responsiveness</h2>
+                    <p>as technologie progresses website responsiveness becomes a necessity more so than a feature, but having a responsive design doesnt only mean...</p>
+                    <h5>By <span style="color:blue;">Author</span></h5>
+                </div>
+                <div class="article-container">
+                    <div><img src="./assets/data/articles/article-004/front.jpg" alt=""/></div>
+                    <h2>The unspoken rules of coding</h2>
+                    <p>every coder with more than a year&apos;s experience will tell you , there&apos;s more to writing code than just clicking the run button and seeing it work...</p>
+                    <h5>By <span style="color:blue;">Author</span></h5>
+                </div>
+                <div class="article-container">
+                    <div><img src="./assets/data/articles/article-005/front.jpg" alt=""/></div>
+                    <h2>Best Tools for web design in 2019</h2>
+                    <p>Web development and web design go hand in hand, and people are more ambitious than hence the appearence of the web designer/developer club, ...</p>
+                    <h5>By <span style="color:blue;">Author</span></h5>
+                </div>
+                <div class="article-container">
+                    <div><img src="./assets/data/articles/article-006/front.jpg" alt=""/></div>
+                    <h2>Developing your first React Application</h2>
+                    <p>starting your first React app can be a challenging task if you don&apos;t have the right guidance, but fear no more today we will be building a full...</p>
+                    <h5>By <span style="color:blue;">Author</span></h5>
+                </div>
+            </div>
+<!-- ------------------------------------END OF THE CONTENT OF THE PAGE--------------------------------- -->
+        </div>
+    </main>
+    <footer>
+        <div class="copyright">&#9400;Achraf Salimi</div>
+    </footer>
+
+<!-- ============================================SCRIPTS=========================================         -->
+    <script src="./assets/js/index.js" type="text/javascript"></script>
+    <script src="./assets/js/mainPage.js" type="text/javascript"></script>
+        
+
+</body>
+</html>
