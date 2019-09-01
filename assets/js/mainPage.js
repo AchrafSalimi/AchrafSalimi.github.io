@@ -1,20 +1,11 @@
 
-            for(let i=0 ; i<document.querySelectorAll('.Loader-logo path').length ; i++){
-                console.log(document.querySelectorAll('.Loader-logo path')[i].getTotalLength());
-            }
             var SlideTimer;
             var Shown=false,onAnimation=false;
             let profileIcon = document.querySelector('.profile-icon');
             let cover = document.getElementById('cover-website');
             let LoginShown=false;
 
-            if(window.getComputedStyle(document.querySelector('.Loader-logo path:nth-child(8)')).getPropertyValue('stroke-dashoffset') == 0){OnAnimationEnd(document.querySelector('.Loader-logo path:nth-child(8)'),function(){
-                    document.querySelector('body').style.overflowY= 'scroll';
-                    document.getElementById('loader').classList.add('loader-faded');
-            })}else{
-                    document.querySelector('body').style.overflowY= 'scroll';
-                    document.getElementById('loader').classList.add('loader-faded');   
-            }
+
 /* Initialize*/
 
             function initialize(){
@@ -71,7 +62,13 @@
                 OnTransitionEnd(document.getElementById('loader'),function(){
                     this.style.display = 'none';
                 });
-
+                if(window.getComputedStyle(document.querySelector('.Loader-logo path:nth-child(8)')).getPropertyValue('stroke-dashoffset') == 0){OnAnimationEnd(document.querySelector('.Loader-logo path:nth-child(8)'),function(){
+                    document.querySelector('body').style.overflowY= 'scroll';
+                    document.getElementById('loader').classList.add('loader-faded');
+                })}else{
+                    document.querySelector('body').style.overflowY= 'scroll';
+                    document.getElementById('loader').classList.add('loader-faded');   
+                }
 
 }
 
