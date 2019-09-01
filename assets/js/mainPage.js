@@ -62,12 +62,14 @@
                 OnTransitionEnd(document.getElementById('loader'),function(){
                     this.style.display = 'none';
                 });
-                if(window.getComputedStyle(document.querySelector('.Loader-logo path:nth-child(8)')).getPropertyValue('stroke-dashoffset') !== 0){OnAnimationEnd(document.querySelector('.Loader-logo path:nth-child(8)'),function(){
+                if(window.getComputedStyle(document.querySelector('.Loader-logo path:nth-child(8)')).getPropertyValue('stroke-dashoffset') == '0px'){
                     document.querySelector('body').style.overflowY= 'scroll';
-                    document.getElementById('loader').classList.add('loader-faded');
-                })}else{
-                    document.querySelector('body').style.overflowY= 'scroll';
-                    document.getElementById('loader').classList.add('loader-faded');   
+                    document.getElementById('loader').classList.add('loader-faded');  
+                }else{
+                    OnAnimationEnd(document.querySelector('.Loader-logo path:nth-child(8)'),function(){
+                        document.querySelector('body').style.overflowY= 'scroll';
+                        document.getElementById('loader').classList.add('loader-faded');
+                    })
                 }
 
 }
