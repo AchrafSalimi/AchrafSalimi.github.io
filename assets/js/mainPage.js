@@ -8,10 +8,13 @@
             let cover = document.getElementById('cover-website');
             let LoginShown=false;
 
-            OnAnimationEnd(document.querySelector('.Loader-logo path:nth-child(8)'),function(){
+            if(window.getComputedStyle(document.querySelector('.Loader-logo path:nth-child(8)')).getPropertyValue('stroke-dashoffset') == 0){OnAnimationEnd(document.querySelector('.Loader-logo path:nth-child(8)'),function(){
                     document.querySelector('body').style.overflowY= 'scroll';
                     document.getElementById('loader').classList.add('loader-faded');
-            })
+            })}else{
+                    document.querySelector('body').style.overflowY= 'scroll';
+                    document.getElementById('loader').classList.add('loader-faded');   
+            }
 /* Initialize*/
 
             function initialize(){
