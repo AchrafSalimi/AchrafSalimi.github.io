@@ -7,6 +7,11 @@
             let profileIcon = document.querySelector('.profile-icon');
             let cover = document.getElementById('cover-website');
             let LoginShown=false;
+
+            OnAnimationEnd(document.querySelector('.Loader-logo path:nth-child(8)'),function(){
+                    document.querySelector('body').style.overflowY= 'scroll';
+                    document.getElementById('loader').classList.add('loader-faded');
+            })
 /* Initialize*/
 
             function initialize(){
@@ -63,10 +68,7 @@
                 OnTransitionEnd(document.getElementById('loader'),function(){
                     this.style.display = 'none';
                 });
-                OnAnimationEnd(document.querySelector('.Loader-logo path:nth-child(8)'),function(){
-                    document.querySelector('body').style.overflowY= 'scroll';
-                    document.getElementById('loader').classList.add('loader-faded');
-                })
+
 
 }
 
