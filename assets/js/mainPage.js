@@ -66,7 +66,7 @@
                 setTimeout(() => {
                     document.querySelector('body').style.overflowY= 'scroll';
                     document.getElementById('loader').classList.add('loader-faded');
-                }, 2500);
+                }, 2200);
 }
 
 
